@@ -1,17 +1,9 @@
 import { useLocalStorage } from './useLocalStorage'
 
-export const useDarkMode = (initialValues) => {
+export const useDarkMode = (initialValue) => {
 
 
-    const [values, setValues] = useLocalStorage("darkMode",initialValues)
+    const [value, setValue] = useLocalStorage("darkMode", initialValue)
 
-    const handleChanges = e => {
-        // setValues({
-        //     ...values,
-        //     [e.target.name]: e.target.value
-        // })
-        console.log('test')
-    }
-
-    return [values, handleChanges]
+    return [value, setValue]
 }
